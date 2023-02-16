@@ -16,7 +16,6 @@ import { Container } from './styles';
 
 const Home = () => {
   const theme = useTheme();
-  const { products } = useProduct();
   const { user } = useAuth();
 
   return (
