@@ -1,28 +1,23 @@
 import React, { createContext, useState } from 'react';
 import {
   IUserProviderProps,
-  AuthContextData,
-  AuthProviderProps,
-  IProductProps,
+  IAuthContextData,
+  IAuthProviderProps,
 } from './index.d';
 
-const UserContext = createContext({} as AuthContextData);
+const UserContext = createContext({} as IAuthContextData);
 
-const UserProvider = ({ children }: AuthProviderProps) => {
+const UserProvider = ({ children }: IAuthProviderProps) => {
   const [user, setUser] = useState<IUserProviderProps>({
     name: 'Weverson',
   } as IUserProviderProps);
-
-  const [products, setProducts] = useState<IProductProps>({} as IProductProps);
-
-  const [loading, setLoading] = useState(false);
 
   const signIn = async () => {};
 
   const signOut = async () => {};
 
   return (
-    <UserContext.Provider value={{ user, loading, signIn, signOut, products }}>
+    <UserContext.Provider value={{ user, signIn, signOut }}>
       {children}
     </UserContext.Provider>
   );

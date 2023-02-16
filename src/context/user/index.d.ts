@@ -11,30 +11,18 @@ type IUserProviderProps = {
   token?: string;
 };
 
-type IProductProps = {
-  name: string;
-};
-type AuthContextData = {
+type IAuthContextData = {
   /** date user  */
   user: IUserProviderProps;
-  loading: boolean;
   signIn: () => Promise<void>;
   signOut: () => Promise<void>;
-
-  /**products */
-  products: IProductProps;
 };
 
-type AuthProviderProps = {
+type IAuthProviderProps = {
   children: ReactNode;
 };
 
 /**
  * EXPORTS
  */
-export {
-  IUserProviderProps,
-  AuthContextData,
-  AuthProviderProps,
-  IProductProps,
-};
+export { IUserProviderProps, IAuthContextData, IAuthProviderProps };
