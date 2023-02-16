@@ -6,16 +6,16 @@ import { TextProps } from 'react-native';
 
 interface ITextProps extends TextProps {
   text?: string;
-  width?: number;
+  width?: number | string;
   size?: number;
   color?: string;
   align?: 'center' | 'left' | 'right';
-  padding?: number;
-  marginBottom?: number;
-  marginTop?: number;
-  marginLeft?: number;
-  marginRight?: number;
-  margin?: number;
+  padding?: string | number | undefined;
+  marginBottom?: string | number | undefined;
+  marginTop?: string | number | undefined;
+  marginLeft?: string | number | undefined;
+  marginRight?: string | number | undefined;
+  margin?: string | number | undefined;
   textDecoration?: 'line-through' | 'underline' | 'none';
   weight?: '300' | '400' | '500' | '600' | '700';
   ellipsis?: boolean;

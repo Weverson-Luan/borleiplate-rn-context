@@ -2,7 +2,7 @@
  * IMPORTS
  */
 
-type UserProps = {
+type IUserProps = {
   user: {
     name: string;
     email: string;
@@ -10,12 +10,9 @@ type UserProps = {
     access_token?: string;
     token?: string;
   };
-  products: {
-    name: string;
-  };
 };
 
 /**
  * EXPORTS
  */
-export { UserProps };
+export { IUserProps };

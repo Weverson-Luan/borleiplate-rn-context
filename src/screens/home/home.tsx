@@ -2,25 +2,29 @@
  * IMPORTS
  */
 import React from 'react';
-import { useAuth } from '../../context/hooks/use-hook';
 import { useTheme } from 'styled-components';
 
 // components
 import { Text } from '../../components/text';
+
+// context api
+import { useAuth } from '../../context/hooks/user/use-hook';
+import { useProduct } from '../../context/hooks/product/product-hook';
 
 // styles
 import { Container } from './styles';
 
 const Home = () => {
   const theme = useTheme();
-  const { user, products } = useAuth();
+  const { products } = useProduct();
+  const { user } = useAuth();
 
   return (
     <Container>
       <Text
-        text={`Hello World ${user.name}`}
+        text={`Hello World ${user?.name}`}
         fontFamily="Poppins-Thin"
-        color={theme.colors.neutral_100}
+        color={theme.colors.red_50}
         size={32}
         align="center"
         letterHeight={32}
